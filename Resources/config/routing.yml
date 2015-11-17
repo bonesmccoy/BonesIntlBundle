@@ -1,3 +1,18 @@
-bones_intl_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: BonesIntlBundle:Default:index }
+bones_intl.countries.all:
+    pattern:  /country/list.{_format}
+    defaults: { _controller: BonesIntlBundle:Location:countries, _format: json }
+    requirements:
+        _method: GET
+
+
+bones_intl.state.all:
+    pattern:  /state/list.{_format}
+    defaults: { _controller: BonesIntlBundle:Location:states, _format: json }
+    requirements:
+        _method: GET
+
+bones_intl.state.list.country:
+    pattern:  /state/{countryCode}/list.{_format}
+    defaults: { _controller: BonesIntlBundle:Location:statesByCountryCode, _format: json }
+    requirements:
+        _method: GET

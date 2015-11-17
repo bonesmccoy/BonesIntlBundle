@@ -1,4 +1,7 @@
 services:
-#    bones_intl.example:
-#        class: Bones\IntlBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+
+    bones_intl.repository.location.country:
+        class: Bones\IntlBundle\Model\Location\CountryRepository
+
+    bones_intl.repository.location.state:
+        class: Bones\IntlBundle\Model\Location\StateRepository
