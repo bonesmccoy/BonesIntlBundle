@@ -1,5 +1,5 @@
 {
-    "name": "bonesmcoy/bonesIntlBundle",
+    "name": "bonesmccoy/BonesIntlBundle",
     "type": "symfony-bundle",
     "description": "Bones Country / State / Currency bundle",
     "keywords": ["Country States"],
