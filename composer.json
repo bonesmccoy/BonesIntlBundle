@@ -1,0 +1,19 @@
+{
+    "name": "bonesmcoy/bonesIntlBundle",
+    "type": "symfony-bundle",
+    "description": "Bones Country / State / Currency bundle",
+    "keywords": ["Country States"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniele Murroni",
+            "email": "daniele.murroni@gmail.com"
+        }
+    ],
+    "require": {
+        "friendsofsymfony/rest-bundle": "*"
+    },
+    "autoload": {
+        "psr-4": { "Bones\\IntlBundle\\": "" }
+    }
+}
