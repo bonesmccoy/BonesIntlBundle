@@ -21,6 +21,9 @@ class CountryRepository
         }
     }
 
+    /**
+     * @return Country[]
+     */
     public function findAll()
     {
         return $this->countries;

@@ -5,7 +5,7 @@ namespace Bones\IntlBundle\Model\Location;
 /**
  * State
  */
-class State
+class State implements LocationInterface
 {
     /**
      * @var string

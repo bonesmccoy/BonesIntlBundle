@@ -5,7 +5,7 @@ namespace Bones\IntlBundle\Model\Location;
 /**
  * Country
  */
-class Country
+class Country implements LocationInterface
 {
     /**
      * @var string
