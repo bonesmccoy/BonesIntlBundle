@@ -6,6 +6,7 @@ use Bones\IntlBundle\Model\Location\CountryRepository;
 use Bones\IntlBundle\Model\Location\StateRepository;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
+use Symfony\Component\HttpFoundation\Request;
 
 class LocationController extends FOSRestController
 {
@@ -26,9 +27,12 @@ class LocationController extends FOSRestController
         return $this->handleView($view);
     }
 
-    public function statesByCountryCodeAction($countryCode)
+    public function statesByCountryCodeAction(Request $request)
     {
-        $stateList = $this->getStateRepository()->findAllByCountryCode($countryCode);
+        $stateList = array();
+        if ($countryCode = $request->get('countryCode')) {
+            $stateList = $this->getStateRepository()->findAllByCountryCode($countryCode);
+        }
 
         return $this->handleView($this->view($stateList));
     }

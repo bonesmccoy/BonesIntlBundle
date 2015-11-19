@@ -12,7 +12,7 @@ bones_intl.state.all:
         _method: GET
 
 bones_intl.state.list.country:
-    pattern:  /state/{countryCode}/list.{_format}
+    pattern:  /state/country/list.{_format}
     defaults: { _controller: BonesIntlBundle:Location:statesByCountryCode, _format: json }
     requirements:
         _method: GET

@@ -17,8 +17,9 @@ class StateRepository
     public function __construct()
     {
         $arrayStates = json_decode($this->jsonData, 1);
-
+        asort($arrayStates);
         foreach($arrayStates as $countryCode => $states) {
+            asort($states);
             foreach($states as $stateCode => $name) {
                 $this->states[$countryCode][$stateCode] = new State($stateCode, $name, $countryCode);
             }

@@ -15,7 +15,7 @@ class CountryRepository
     public function __construct()
     {
         $arrayCountries = json_decode($this->jsonData, 1);
-        ksort($arrayCountries);
+        asort($arrayCountries);
         foreach($arrayCountries as $countryCode => $name) {
             $this->countries[$countryCode] = new Country($countryCode, $name);
         }
