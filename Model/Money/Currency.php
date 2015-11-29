@@ -50,7 +50,6 @@ class Currency
      */
     public function __construct($code, $name, $symbol,  $format, $decimalPoint, $thousandsDivider)
     {
-
         $this->code = $code;
         $this->name = $name;
         $this->symbol = $symbol;
