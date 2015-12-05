@@ -27,7 +27,7 @@ class LocationController extends FOSRestController
         return $this->handleView($view);
     }
 
-    public function statesByCountryCodeAction(Request $request)
+    public function statesByCountryCodeAction(Request $request, $countryCode)
     {
         $stateList = array();
         if ($countryCode = $request->get('countryCode')) {

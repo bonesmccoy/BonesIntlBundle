@@ -3,6 +3,8 @@ bones_intl.countries.all:
     defaults: { _controller: BonesIntlBundle:Location:countries, _format: json }
     requirements:
         _method: GET
+    options:
+            expose: true
 
 
 bones_intl.state.all:
@@ -10,9 +12,13 @@ bones_intl.state.all:
     defaults: { _controller: BonesIntlBundle:Location:states, _format: json }
     requirements:
         _method: GET
+    options:
+            expose: true
 
 bones_intl.state.list.country:
-    pattern:  /state/country/list.{_format}
+    pattern:  /state/country/{countryCode}/list.{_format}
     defaults: { _controller: BonesIntlBundle:Location:statesByCountryCode, _format: json }
     requirements:
         _method: GET
+    options:
+            expose: true
