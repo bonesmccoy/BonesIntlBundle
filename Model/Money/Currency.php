@@ -197,6 +197,11 @@ class Currency
         $this->thousandsDivider = $thousandsDivider;
     }
 
+    public function isEqualTo(Currency $currency)
+    {
+        return ($this->getCode() == $currency->getCode());
+    }
+
 
 }
 
