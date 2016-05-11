@@ -27,7 +27,7 @@ class CurrencyRepository implements ObjectRepository, Selectable
      *
      * @param mixed $id The identifier.
      *
-     * @return object The object.
+     * @return Currency The object.
      */
     public function find($id)
     {
