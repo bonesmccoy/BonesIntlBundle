@@ -6,6 +6,8 @@ use JMS\Serializer\Annotation as JMS;
 
 /**
  * Class Price
+ *
+ * @JMs\ReadOnly
  */
 class Price
 {
@@ -20,7 +22,8 @@ class Price
     /**
      * @var Currency
      *
-     * @JMS\Type("Bones\IntlBundle\Model\Money\Currency");
+     * @JMS\Type("string");
+     * @JMS\Accessor("getCurrencyCode");
      */
     private $currency;
 
@@ -79,5 +82,13 @@ class Price
         $amountInString .= $this->currency->getDecimalPoint().$decimal;
 
         return str_replace(Currency::FORMAT_PLACEHOLDER, $amountInString, $format);
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrencyCode()
+    {
+        return $this->currency->getCode();
     }
 }
