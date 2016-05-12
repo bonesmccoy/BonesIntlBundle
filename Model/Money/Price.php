@@ -2,23 +2,31 @@
 
 namespace Bones\IntlBundle\Model\Money;
 
+use JMS\Serializer\Annotation as JMS;
 
+/**
+ * Class Price
+ */
 class Price
 {
 
     /**
      * @var double;
+     *
+     * @JMS\Type("double")
      */
     private $amount;
 
     /**
      * @var Currency
+     *
+     * @JMS\Type("Bones\IntlBundle\Model\Money\Currency");
      */
     private $currency;
 
 
     /**
-     * @param $amount
+     * @param double   $amount
      * @param Currency $currency
      */
     public function __construct($amount, Currency $currency)
@@ -43,7 +51,9 @@ class Price
         return $this->currency;
     }
 
-
+    /**
+     * @return string
+     */
     public function format()
     {
         $format = $this->currency->getFormat();
@@ -56,8 +66,8 @@ class Price
         $reversedIntAmount = strrev($parts[0]);
         $amountInString = '';
 
-        for($i = 0; $i < strlen($reversedIntAmount); $i++) {
-            if ($i != 0 && $i%3 == 0 ) {
+        for ($i = 0; $i < strlen($reversedIntAmount); $i++) {
+            if ($i != 0 && $i%3 == 0) {
                 $amountInString .= $this->currency->getThousandsDivider();
             }
             $amountInString .= $reversedIntAmount[$i];
@@ -66,9 +76,7 @@ class Price
         $amountInString = strrev($amountInString);
 
         $decimal = ($hasDecimal) ? $parts[1] : "00";
-        $amountInString .= $this->currency->getDecimalPoint() . $decimal;
-
-
+        $amountInString .= $this->currency->getDecimalPoint().$decimal;
 
         return str_replace(Currency::FORMAT_PLACEHOLDER, $amountInString, $format);
     }

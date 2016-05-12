@@ -41,14 +41,14 @@ class Currency
 
 
     /**
-     * @param $code
-     * @param $name
-     * @param $symbol
-     * @param $format
-     * @param $decimalPoint
-     * @param $thousandsDivider
+     * @param string $code
+     * @param string $name
+     * @param string $symbol
+     * @param string $format
+     * @param string $decimalPoint
+     * @param string $thousandsDivider
      */
-    public function __construct($code, $name, $symbol,  $format, $decimalPoint, $thousandsDivider)
+    public function __construct($code, $name, $symbol, $format, $decimalPoint, $thousandsDivider)
     {
         $this->code = $code;
         $this->name = $name;
@@ -57,7 +57,6 @@ class Currency
         $this->decimalPoint = $decimalPoint;
         $this->thousandsDivider = $thousandsDivider;
     }
-
 
     /**
      * Get id
@@ -197,11 +196,13 @@ class Currency
         $this->thousandsDivider = $thousandsDivider;
     }
 
+    /**
+     * @param Currency $currency
+     * @return bool
+     */
     public function isEqualTo(Currency $currency)
     {
         return ($this->getCode() == $currency->getCode());
     }
-
-
 }
 
