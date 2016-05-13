@@ -22,8 +22,7 @@ class Price
     /**
      * @var Currency
      *
-     * @JMS\Type("string");
-     * @JMS\Accessor("getCurrencyCode");
+     * @JMS\Type("Bones\IntlBundle\Model\Money\Currency");
      */
     private $currency;
 
@@ -82,13 +81,5 @@ class Price
         $amountInString .= $this->currency->getDecimalPoint().$decimal;
 
         return str_replace(Currency::FORMAT_PLACEHOLDER, $amountInString, $format);
-    }
-
-    /**
-     * @return string
-     */
-    public function getCurrencyCode()
-    {
-        return $this->currency->getCode();
     }
 }

@@ -2,8 +2,11 @@
 
 namespace Bones\IntlBundle\Model\Money;
 
+use JMS\Serializer\Annotation as JMS;
+
 /**
  * Currency
+ * @JMS\ExclusionPolicy("all")
  */
 class Currency
 {
@@ -15,6 +18,8 @@ class Currency
 
     /**
      * @var string
+     *
+     * @JMS\Expose
      */
     private $code;
 
