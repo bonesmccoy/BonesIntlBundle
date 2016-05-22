@@ -1,10 +1,10 @@
 <?php
 
-namespace Bones\IntlBundle\Tests\Model;
+namespace Bones\CommonBundle\Tests\Model;
 
 
-use Bones\IntlBundle\Model\Money\Currency;
-use Bones\IntlBundle\Model\Money\Price;
+use Bones\CommonBundle\Model\Money\Currency;
+use Bones\CommonBundle\Model\Money\Price;
 
 class PriceTest  extends \PHPUnit_Framework_TestCase
 {

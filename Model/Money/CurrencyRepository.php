@@ -1,6 +1,6 @@
 <?php
 
-namespace Bones\IntlBundle\Model\Money;
+namespace Bones\CommonBundle\Model\Money;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\Criteria;

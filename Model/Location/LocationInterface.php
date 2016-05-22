@@ -1,6 +1,6 @@
 <?php
 
-namespace Bones\IntlBundle\Model\Location;
+namespace Bones\CommonBundle\Model\Location;
 
 
 interface LocationInterface

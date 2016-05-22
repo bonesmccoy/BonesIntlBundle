@@ -1,8 +1,7 @@
 {
-    "name": "bonesmccoy/bones-intl-bundle",
+    "name": "bonesmccoy/bones-common-bundle",
     "type": "symfony-bundle",
-    "description": "Bones Country / State / Currency bundle",
-    "keywords": ["Country States"],
+    "description": "Bones Common bundle",
     "license": "MIT",
     "authors": [
         {
@@ -15,6 +14,6 @@
         "jms/serializer-bundle": "^1.1"
     },
     "autoload": {
-        "psr-4": { "Bones\\IntlBundle\\": "" }
+        "psr-4": { "Bones\\CommonBundle\\": "" }
     }
 }

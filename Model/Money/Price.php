@@ -1,6 +1,6 @@
 <?php
 
-namespace Bones\IntlBundle\Model\Money;
+namespace Bones\CommonBundle\Model\Money;
 
 use JMS\Serializer\Annotation as JMS;
 

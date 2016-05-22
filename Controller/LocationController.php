@@ -1,9 +1,9 @@
 <?php
 
-namespace Bones\IntlBundle\Controller;
+namespace Bones\CommonBundle\Controller;
 
-use Bones\IntlBundle\Model\Location\CountryRepository;
-use Bones\IntlBundle\Model\Location\StateRepository;
+use Bones\CommonBundle\Model\Location\CountryRepository;
+use Bones\CommonBundle\Model\Location\StateRepository;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
@@ -56,4 +56,3 @@ class LocationController extends FOSRestController
 
 
 }
- 

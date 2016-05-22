@@ -1,9 +1,9 @@
 <?php
 
-namespace Bones\IntlBundle\Utils;
+namespace Bones\CommonBundle\Utils;
 
 
-use Bones\IntlBundle\Model\Location\LocationInterface;
+use Bones\CommonBundle\Model\Location\LocationInterface;
 
 class Location
 {
@@ -22,4 +22,3 @@ class Location
         return $array;
     }
 }
- 

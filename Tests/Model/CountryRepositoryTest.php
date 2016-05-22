@@ -1,10 +1,10 @@
 <?php
 
-namespace Bones\IntlBundle\Tests\Model;
+namespace Bones\CommonBundle\Tests\Model;
 
 
-use Bones\IntlBundle\Model\Location\Country;
-use Bones\IntlBundle\Model\Location\CountryRepository;
+use Bones\CommonBundle\Model\Location\Country;
+use Bones\CommonBundle\Model\Location\CountryRepository;
 
 class CountryRepositoryTest extends \PHPUnit_Framework_TestCase
 {

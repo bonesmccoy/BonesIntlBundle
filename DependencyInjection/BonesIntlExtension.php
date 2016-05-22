@@ -1,6 +1,6 @@
 <?php
 
-namespace Bones\IntlBundle\DependencyInjection;
+namespace Bones\CommonBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
